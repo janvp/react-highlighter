@@ -16,6 +16,11 @@ npm install react-highlighter --save
 var Highlight = require('react-highlighter');
 
 <Highlight search="brown">The quick brown fox jumps over the lazy dog</Highlight>
+
+<Highlight search="the">
+    <div>The quick brown</div>
+    <p>jumps over <span>the lazy dog</span></p>
+</Highlight>
 ```
 ## Props
 - `search`: The string of text (or Regular Expression) to highlight
@@ -23,6 +28,7 @@ var Highlight = require('react-highlighter');
 - `matchElement`: HTML tag name to wrap around highlighted text. Defaults to `strong`
 - `matchClass`: HTML class to wrap around highlighted text. Defaults to `highlight`
 - `matchStyle`: Custom style for the match element around highlighted text.
+- `rootElement`: HTML tag name used as root element for the highlight rendering. Defaults to `div`
 
 
 ## Development
